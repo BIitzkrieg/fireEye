@@ -27,10 +27,10 @@ from hx_lib import *
 import ssl
 
 # HX Configuraiton settings
-hx_host = "pagani.ocio.nih.gov"
+hx_host = ""
 hx_port = "3000"
-hx_user = "danisacapi"
-hx_pass = "so2DPxZFktQeqjYO5Wn4"
+hx_user = ""
+hx_pass = ""
 
 hx_api_object = HXAPI(hx_host, hx_port=hx_port)
 
