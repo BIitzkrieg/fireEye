@@ -14,7 +14,6 @@ def validInput(string):
 def mainMenu():
     print("######## Main Menu ########")
     print()
-    #print("[ 1 ]  File Acquisition for a list of hosts")
     print("[ 1 ]  Acquire Triage for a list of hosts")
     print("[ 2 ]  Contain a list of hosts")
     print("[ 3 ]  Get Containment status for a list of hosts")
