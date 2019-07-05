@@ -12,7 +12,7 @@ pwd = ''
 
 def __init__(self):
     parser = argparse.ArgumentParser(
-        description='FireEye CMS command-line utility',
+        description='Acknowledges Alerts in Fire Eye NX/CMS',
         usage='''\tcmsAck.py [<args>]
         
         List of args:
