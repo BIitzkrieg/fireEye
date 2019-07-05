@@ -37,9 +37,9 @@ def cmsauth(user, pwd):
         print(cms.status_code)
     token = cms.headers['x-feapi-token']
     # pass to getAlerts to use in POST to CMS
-    getAlerts(token)
+    ackAlerts(token)
 
-def getAlerts(token):
+def ackAlerts(token):
     parser = argparse.ArgumentParser(
         description='Requests a triage acquisition')
 
