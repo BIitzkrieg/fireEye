@@ -26,7 +26,7 @@ import json
 from hx_lib import *
 import ssl
 
-# HX Configuraiton settings
+# HX Configuration settings
 hx_host = ""
 hx_port = "3000"
 hx_user = ""
