@@ -4,7 +4,7 @@
 # #######################################################
 # FireEye HX command-line utility
 # Henrik Olsson, henrik.olsson@fireeye.com
-# Modifed by Andrew Danis, Added containstatus and containstop functions
+# Modifed by Andrew Danis, Added containstatus, containstop, standard and comprehensive acquisition functions
 #
 # Usage examples:
 # python hx-cmd.py triage -host VICTIM-1 -t "2016-12-16 04:00:00"
@@ -16,6 +16,8 @@
 # python hx-cmd.py containreq -host VICTIM-1
 # python hx-cmd.py containstatus -host VICTIM-1
 # python hx-cmd.py containstop -host VICTIM-1
+# python hx-cmd.py stanacq-host VICTIM-1
+# python hx-cmd.py compacq -host VICTIM-1
 
 #########################################################
 
@@ -53,6 +55,8 @@ List of commands:
    \tcontainapp     Containment request for a host (Requires API admin account)
    \tcontainstatus	Containment status request for a host
    \tcontainstop	Cancels a containment request or removes a host from quarantine
+   \tstanacq        Requests a standard investigative data acquisition
+   \tcompacq        Requests a comprehensive investigative data acquisition
 ''')
         parser.add_argument('command', help='Subcommand to run')
         args = parser.parse_args(sys.argv[1:2])
@@ -206,7 +210,6 @@ List of commands:
                 (ret, response_code, response_data) = hx_api_object.restAddIndicator(hx_user, args.n, myplatforms,
                                                                                      category)
                 if ret:
-                    iocURI = response_data['data']['uri_name']
                     (ret, response_code, result) = hx_api_object.restAddCondition(category, iocURI, args.t, data)
                     if ret:
                         print("\t# IOC Name:\t\t" + args.n)
@@ -529,6 +532,101 @@ List of commands:
             print("Too few arguments")
             exit(1)
 
+    def stanacq(self):
+        parser = argparse.ArgumentParser(
+            description='Pulls standard investigation details ')
+
+        parser.add_argument('-host', help='Hostname or IP', metavar='host', required=True)
+
+        args = parser.parse_args(sys.argv[2:])
+
+        if (args.host):
+            (ret, response_code, response_data) = hx_api_object.restLogin(hx_user, hx_pass)
+            if ret:
+                print("\t# Authentication:\t\tSuccessful")
+
+                (ret, response_code, hostdata) = hx_api_object.restFindHostsBySearchString(args.host)
+                if ret:
+                    # test to see HX json result
+                    # print(hostdata)
+                    if len(hostdata['data']['entries']) == 0:
+                        print("No matching host")
+                        exit(1)
+
+                    agentId = hostdata['data']['entries'][0]['_id']
+                    print("\t# Identified host:\t\t" + hostdata['data']['entries'][0]['hostname'])
+                    print("\t# Installed OS:\t\t\t" + hostdata['data']['entries'][0]['os']['product_name'] + ", " + str(
+                        hostdata['data']['entries'][0]['os']['patch_level']) + ", " +
+                          hostdata['data']['entries'][0]['os']['bitness'])
+
+                    (ret, response_code, result) = hx_api_object.restNewAcquisition(agentId, script="6d4cdc1e72ba17bbf9788b6142eae43d45f473ee")
+                    if ret:
+                        # test to see HX json result
+                        # print(result)
+                        if response_code == 201:
+                            print("\t# Standard Investigative Details Acquisition Started:\t" + "Yes")
+                        elif response_code == 404:
+                            print("\t# Agent ID does not exist")
+                        elif response_code == 422:
+                            print("\t# Unsuccessful, invalid fields included in input")
+                        else:
+                            print("\t# Other error:" + "response code: " + response_code + "Result: " + result)
+
+                (ret, response_code, response_data) = hx_api_object.restLogout()
+                if ret:
+                    print("\t# Authentication:\t\tSuccessfully released token")
+
+        else:
+            print("Too few arguments")
+            exit(1)
+
+    def compacq(self):
+        parser = argparse.ArgumentParser(
+            description='Pulls Comprehensive investigation details ')
+
+        parser.add_argument('-host', help='Hostname or IP', metavar='host', required=True)
+
+        args = parser.parse_args(sys.argv[2:])
+
+        if (args.host):
+            (ret, response_code, response_data) = hx_api_object.restLogin(hx_user, hx_pass)
+            if ret:
+                print("\t# Authentication:\t\tSuccessful")
+
+                (ret, response_code, hostdata) = hx_api_object.restFindHostsBySearchString(args.host)
+                if ret:
+                    # test to see HX json result
+                    # print(hostdata)
+                    if len(hostdata['data']['entries']) == 0:
+                        print("No matching host")
+                        exit(1)
+
+                    agentId = hostdata['data']['entries'][0]['_id']
+                    print("\t# Identified host:\t\t" + hostdata['data']['entries'][0]['hostname'])
+                    print("\t# Installed OS:\t\t\t" + hostdata['data']['entries'][0]['os']['product_name'] + ", " + str(
+                        hostdata['data']['entries'][0]['os']['patch_level']) + ", " +
+                          hostdata['data']['entries'][0]['os']['bitness'])
+
+                    (ret, response_code, result) = hx_api_object.restNewAcquisition(agentId, script="b36ebec6d9fa0411c4d6f68d01e4d16769a0f990")
+                    if ret:
+                        # test to see HX json result
+                        # print(result)
+                        if response_code == 201:
+                            print("\t# Comprehensive Investigative Details Acquisition Started:\t" + "Yes")
+                        elif response_code == 404:
+                            print("\t# Agent ID does not exist")
+                        elif response_code == 422:
+                            print("\t# Unsuccessful, invalid fields included in input")
+                        else:
+                            print("\t# Other error:" + "response code: " + response_code + "Result: " + result)
+
+                (ret, response_code, response_data) = hx_api_object.restLogout()
+                if ret:
+                    print("\t# Authentication:\t\tSuccessfully released token")
+
+        else:
+            print("Too few arguments")
+            exit(1)
 
 if __name__ == '__main__':
     hxcmd()
