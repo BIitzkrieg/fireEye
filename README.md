@@ -7,4 +7,4 @@ Fire Eye Related Scripts
  Customized hx-cmd script by Henrik Olsson of Fire Eye. Fixed the approve containment function. Also added functionality to get containment status, and stop containment of hosts. Needs his hx_lib library to function.
 
  # cmsAck
- Acknowledge NX Alerts in CMS via the API
+ Acknowledge NX Alerts in NX/CMS via the API
