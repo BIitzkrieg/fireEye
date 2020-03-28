@@ -1,5 +1,5 @@
 # fireEye
-Fire Eye Related Scripts
+Fire Eye Related Scripts and Indicator Rules
  # hx-menu
  Simple hacky menu script to interface with hx-cmd. Reads in a list of hosts to preform mutliple actions on.
  
