@@ -1,0 +1,31 @@
+{
+    "b8cfe883-8d96-4f86-b30b-cad513e18470": {
+        "name": "Potential Privilege Escalation - Misuse of Kerberos Ticket Granting Tickets",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "equal",
+                    "token": "regKeyEvent/keyPath",
+                    "type": "text",
+                    "value": "hklm\\system\\currentcontrolset\\control\\lsa\\kerberos\\parameters"
+                },
+                {
+                    "operator": "equal",
+                    "token": "regKeyEvent/valueName",
+                    "type": "text",
+                    "value": "allowtgtsessionkey"
+                },
+                {
+                    "operator": "equal",
+                    "token": "regKeyEvent/value",
+                    "type": "text",
+                    "value": "1"
+                }
+            ]
+        ]
+    }
+}

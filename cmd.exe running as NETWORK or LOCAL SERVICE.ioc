@@ -1,0 +1,25 @@
+{
+    "80a0218c-0b7d-4e02-ac08-eed0c5bfbc1b": {
+        "name": "cmd.exe running as NETWORK or LOCAL SERVICE",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "cmd.exe"
+                },
+                {
+                    "operator": "matches",
+                    "token": "processEvent/username",
+                    "type": "text",
+                    "value": "local service|network service"
+                }
+            ]
+        ]
+    }
+}
