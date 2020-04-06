@@ -16,7 +16,7 @@
 # python hx-cmd.py containreq -host VICTIM-1
 # python hx-cmd.py containstatus -host VICTIM-1
 # python hx-cmd.py containstop -host VICTIM-1
-# python hx-cmd.py stanacq-host VICTIM-1
+# python hx-cmd.py stanacq -host VICTIM-1
 # python hx-cmd.py compacq -host VICTIM-1
 
 #########################################################
