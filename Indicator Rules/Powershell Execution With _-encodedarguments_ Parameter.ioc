@@ -1,0 +1,47 @@
+{
+    "e61e0c26-eef0-45d4-873b-c2fc55c1e52e": {
+        "name": "Powershell Execution With \"-encodedarguments\" Parameter",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "contains",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "powershell"
+                },
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "-encodeda"
+                }
+            ],
+            [
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "powershell.+encodedarguments.+|powershell.+encodeda.+"
+                }
+            ],
+            [
+                {
+                    "operator": "contains",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "powershell"
+                },
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "-encodedarguments"
+                }
+            ]
+        ]
+    }
+}
