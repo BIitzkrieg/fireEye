@@ -1,0 +1,27 @@
+{
+    "d64bc54f-d595-4519-a64e-4533387b6554": {
+        "name": "Attempted file execution via Curl on Windows",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "curl -O (http:\\/\\/|www).+\\040&\\040start.+"
+                }
+            ],
+            [
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "curl -O (http:\\/\\/|www)(.+\\.exe|.+\\.jpg|.+\\.dat|.+\\.scr)"
+                }
+            ]
+        ]
+    }
+}

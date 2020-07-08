@@ -1,0 +1,171 @@
+{
+    "824abe3e-cad8-49c5-b9a4-42286c929ce0": {
+        "name": "APT28 IoCs 6-24-2020",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "cmd.exe/c c:/programdata/temp/msserviceupd.exe c:/programdata/temp/updatesrvc.txt > %windir%\\temp\\"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "schtasks /run /tn windowssupportservice"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "move c:\\programdata\\config.ini c:\\windows\\system32\\efssvc32.dll"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "time /t > c:\\programdata\\config.ini && netstat /an >>c:\\programdata\\config.ini && ipconfig /all >> c:\\programdata\\config.ini && tasklist /v >> c:\\programdata\\config.ini"
+                }
+            ],
+            [
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "schtasks /create /sc minute /mo 1 /tn \"sync update\" /tr"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "sc create microsoftvalidtechbandwith binpath= \"c:\\windows\\system32\\mvtbnd.exe\" start= auto displayname= \"microsoft valid tech bandwidth\""
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "cmd.exe /q /c reg add hkey_users\\*sid*\\software\\classes\\clsid\\{bcde0395-e52f- 467c-8e3d-c4579291692e}\\inprocserver32 /v \"\" /t reg_sz /d \"c:\\windows\\system32\\adruncfm.dll\" /f /reg:64 1> \\\\127.0.0.1\\admin$\\__1499694458.11 2>&1"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "move c:\\programdata\\helper.exe c:\\windows\\"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "move c:\\programdata\\config.ini c:\\windows\\system32\\efssvc.dll"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "move c:\\programdata\\config.ini c:\\windows\\system32\\msimsg32.dll"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "move c:\\programdata\\wlcsdt.cmd c:\\windows\\system32\\"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "cmd.exe /q /c reg add hkey_users\\*sid*\\software\\classes\\clsid\\{bcde0395-e52f- 467c-8e3d-c4579291692e}\\inprocserver32 /v \"\" /t reg_sz /d"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "move c:\\programdata\\vchost.exe c:\\windows\\"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "schtasks /create /tn windowssupportservice /tr \"powershell -c c:\\windows\\system32\\wlcsdt.cmd\" /sc hourly /mo 2 /ru system"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "sc create rpcnet binpath= \"c:\\windows\\system32\\rpcnetp.exe\" start= auto displayname= \"remote procedure call (rpc) net\""
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "schtasks /query /tr n \"sync update\""
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "move nvstream.ini nvstream.exe"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "powershell.exe -c schtasks /run /tn windowstelemetrysync"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "%comspec% /q /c echo xcopy c:\\users\\*user*\\appdata\\roaming\\slack c:\\programdata\\slack /e /i /y /s"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "sc create mvtbnd binpath= \"c:\\windows\\system32\\mvtbnd.exe\" start= auto displayname= \"mvtbnd\""
+                }
+            ]
+        ]
+    }
+}

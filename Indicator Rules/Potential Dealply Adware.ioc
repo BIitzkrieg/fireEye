@@ -1,0 +1,388 @@
+{
+    "302e238d-02a4-4661-9ee3-a82fcc72fe42": {
+        "name": "Potential Dealply Adware",
+        "category": "Custom",
+        "platforms": [
+            "win",
+            "osx"
+        ],
+        "execution": [
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "d11mbkfgyi1bmr.cloudfront.net"
+                }
+            ],
+            [
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "c:\\windows\\system32\\cmd.exe /d /c timeout 10 & cmd /d /c copy /b /y"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "dabfd.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "wugulaf.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "tuwoqol.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "fodfr.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "pajuwu.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "kogodon.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "d11hy3pd9d5a.cloudfront.net"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "todac.mucul.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "codfs.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "cwnpu.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "adofd.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "d3phyc6zac8x9a.cloudfront.net"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "kujofaco.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "bocuhu.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "ziuet.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "bdubnium.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "bxvdc.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "d20k34mzwnrcqb.cloudfront.net"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "d3idbefvjm0doy.cloudfront.net"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "uyvsa.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "d1x1hk7cciwjve.cloudfront.net"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "dk8e5ado2sfv9.cloudfront.net"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "pydac.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "qaofd.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "qogan.com"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "dnsLookupEvent/hostname",
+                    "type": "text",
+                    "value": "pocxc.com"
+                }
+            ]
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/md5",
+                    "type": "md5",
+                    "value": "c49af544be306fa1cd3659efa8623472"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/md5",
+                    "type": "md5",
+                    "value": "5fd8582c2c084a185b8a57e3be902061"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/md5",
+                    "type": "md5",
+                    "value": "37ed2d68e92212b37102546c7850b87f"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/md5",
+                    "type": "md5",
+                    "value": "b35a60450329dc5b9c2bb552db193a31"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/md5",
+                    "type": "md5",
+                    "value": "3ed5cf6bfa4d8e07cadd00eb7f029b66"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/md5",
+                    "type": "md5",
+                    "value": "bedfb788a1eec6cb7b358d55a777e32b"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/md5",
+                    "type": "md5",
+                    "value": "3da6967380bc09571557d24cce9d9699"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/md5",
+                    "type": "md5",
+                    "value": "0c0e66e35aed3203a4f19ccfb8d9d5ea"
+                }
+            ],
+            [
+                {
+                    "operator": "contains",
+                    "token": "urlMonitorEvent/requestUrl",
+                    "type": "text",
+                    "value": "d3idbefvjm0doy.cloudfront.net/xn/4.61.0.50.dat"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/md5",
+                    "type": "md5",
+                    "value": "9d7d89b26fddca83c54d74bd92e3c164"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/md5",
+                    "type": "md5",
+                    "value": "b55d57d0d96f924a14576aaab7de94f9"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/md5",
+                    "type": "md5",
+                    "value": "96d623394804ba647165eacfc59f1590"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "urlMonitorEvent/requestUrl",
+                    "type": "text",
+                    "value": "https://im-mf.s3.amazonaws.com/wa_wrup.dat"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "urlMonitorEvent/requestUrl",
+                    "type": "text",
+                    "value": "http://dwrfiab3y6c09.cloudfront.net/sbrg.dat"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/md5",
+                    "type": "md5",
+                    "value": "6f0c45b26324489a012de672152a638e"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "urlMonitorEvent/requestUrl",
+                    "type": "text",
+                    "value": "http://pxl-nw-svr-981333793.us-east-1.elb.amazonaws.com/pxl/"
+                }
+            ],
+            [
+                {
+                    "operator": "matches",
+                    "token": "fileWriteEvent/fullPath",
+                    "type": "text",
+                    "value": "(?i)appdata\\\\roaming\\\\[a-fA-F0-9]{32}\\\\"
+                },
+                {
+                    "operator": "ends-with",
+                    "token": "fileWriteEvent/fileExtension",
+                    "type": "text",
+                    "value": "exe"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/md5",
+                    "type": "md5",
+                    "value": "5d45cc50d48e5e56b9946bd374f6a202"
+                }
+            ]
+        ]
+    }
+}

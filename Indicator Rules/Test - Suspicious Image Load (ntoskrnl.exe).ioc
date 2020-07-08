@@ -1,0 +1,19 @@
+{
+    "df99e6d4-8dd1-4790-9520-c75deceac232": {
+        "name": "Test - Suspicious Image Load (ntoskrnl.exe)",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "execution": [
+            [
+                {
+                    "operator": "equal",
+                    "token": "imageLoadEvent/fullPath",
+                    "type": "text",
+                    "value": "c:\\windows\\system32\\ntoskrnl.exe"
+                }
+            ]
+        ]
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "28e99aee-cbb3-4d5d-ab42-548f952d9177": {
+        "name": "Suspicious Executable Download from Direct IP Address",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "execution": [
+            [
+                {
+                    "operator": "matches",
+                    "token": "urlMonitorEvent/requestUrl",
+                    "type": "text",
+                    "value": "http:\\/\\/\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\/.+\\.exe"
+                }
+            ],
+            [
+                {
+                    "operator": "matches",
+                    "token": "urlMonitorEvent/requestUrl",
+                    "type": "text",
+                    "value": "https:\\/\\/\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\/.+\\.exe"
+                }
+            ]
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "matches",
+                    "token": "urlMonitorEvent/requestUrl",
+                    "type": "text",
+                    "value": "http:\\/\\/\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\/.+\\.exe"
+                }
+            ],
+            [
+                {
+                    "operator": "matches",
+                    "token": "urlMonitorEvent/requestUrl",
+                    "type": "text",
+                    "value": "https:\\/\\/\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\/.+\\.exe"
+                }
+            ]
+        ]
+    }
+}

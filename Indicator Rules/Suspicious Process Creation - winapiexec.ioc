@@ -1,0 +1,45 @@
+{
+    "17ce1f81-5295-4e47-b99b-fdc167da997f": {
+        "name": "Suspicious Process Creation - winapiexec",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "execution": [
+            [
+                {
+                    "operator": "contains",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "winapiexec"
+                }
+            ],
+            [
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "winapiexec"
+                }
+            ]
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "contains",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "winapiexec"
+                }
+            ],
+            [
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "winapiexec"
+                }
+            ]
+        ]
+    }
+}

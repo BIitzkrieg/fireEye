@@ -1,0 +1,29 @@
+{
+    "5794c3c2-afe2-4279-b48e-cc30a92cb2ca": {
+        "name": "Possible Suspicious Computer Account Creation",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "execution": [
+            [
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "djoin \\/provision \\/domain .+ \\/machine .+ \\/savefile .+ \\/defpwd \\/printblob \\/netbios .+"
+                }
+            ]
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "djoin /provision /domain /machine"
+                }
+            ]
+        ]
+    }
+}
