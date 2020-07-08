@@ -1,0 +1,32 @@
+{
+    "499328df-a41a-4f7d-bfee-67f63ed5a0e8": {
+        "name": "Suspicious Service Detection (TEST)",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "matches",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "c\\:\\\\windows\\\\.*\\.exe"
+                },
+                {
+                    "operator": "matches",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "c\\:\\\\.*\\\\*\\\\*\\.exe",
+                    "negate": true
+                },
+                {
+                    "operator": "equal",
+                    "token": "processEvent/parentProcess",
+                    "type": "text",
+                    "value": "services.exe"
+                }
+            ]
+        ]
+    }
+}
