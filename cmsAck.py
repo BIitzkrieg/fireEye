@@ -41,7 +41,7 @@ def cmsauth(user, pwd):
 
 def ackAlerts(token):
     parser = argparse.ArgumentParser(
-        description='Requests a triage acquisition')
+        description='Acknowledges an NX Alert')
 
     parser.add_argument('-uuid', help='UUID String of Alert Ex: f907b2c6-7d3d-4f83-89d0-8bcb12ea56cb ', required=True)
     parser.add_argument('-type', help='Alert Type Ex: Malware Object', required=True)
