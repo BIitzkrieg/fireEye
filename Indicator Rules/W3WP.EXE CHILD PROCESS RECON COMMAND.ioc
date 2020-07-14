@@ -1,0 +1,71 @@
+{
+    "f0381099-9013-4640-8978-d9b3c9950fc9": {
+        "name": "W3WP.EXE CHILD PROCESS RECON COMMAND",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/parentProcess",
+                    "type": "text",
+                    "value": "w3wp.exe"
+                },
+                {
+                    "operator": "equal",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "cmd.exe"
+                },
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "net user"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/parentProcess",
+                    "type": "text",
+                    "value": "w3wp.exe"
+                },
+                {
+                    "operator": "equal",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "cmd.exe"
+                },
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "whoami|net user"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/parentProcess",
+                    "type": "text",
+                    "value": "w3wp.exe"
+                },
+                {
+                    "operator": "equal",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "cmd.exe"
+                },
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "whoami"
+                }
+            ]
+        ]
+    }
+}
