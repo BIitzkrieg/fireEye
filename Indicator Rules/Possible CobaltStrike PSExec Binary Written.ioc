@@ -1,0 +1,54 @@
+{
+    "610a6ed7-a64a-494a-8fdd-a43cf5277067": {
+        "name": "Possible CobaltStrike PSExec Binary Written",
+        "uri_name": "610a6ed7-a64a-494a-8fdd-a43cf5277067",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "contains",
+                    "token": "fileWriteEvent/filePath",
+                    "type": "text",
+                    "value": "\\\\127.0.0.1\\c$\\"
+                },
+                {
+                    "operator": "matches",
+                    "token": "fileWriteEvent/fileName",
+                    "type": "text",
+                    "value": "[A-Za-z0-9]{7}\\.exe"
+                }
+            ],
+            [
+                {
+                    "operator": "contains",
+                    "token": "fileWriteEvent/filePath",
+                    "type": "text",
+                    "value": "\\\\127.0.0.1\\ipc$\\"
+                },
+                {
+                    "operator": "matches",
+                    "token": "fileWriteEvent/fileName",
+                    "type": "text",
+                    "value": "[A-Za-z0-9]{7}\\.exe"
+                }
+            ],
+            [
+                {
+                    "operator": "contains",
+                    "token": "fileWriteEvent/filePath",
+                    "type": "text",
+                    "value": "\\\\127.0.0.1\\admin$\\"
+                },
+                {
+                    "operator": "matches",
+                    "token": "fileWriteEvent/fileName",
+                    "type": "text",
+                    "value": "[A-Za-z0-9]{7}\\.exe"
+                }
+            ]
+        ]
+    }
+}
