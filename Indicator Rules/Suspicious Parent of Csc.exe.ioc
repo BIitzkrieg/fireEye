@@ -1,0 +1,26 @@
+{
+    "942ab782-809d-423e-b642-42ed02bcdda4": {
+        "name": "Suspicious Parent of Csc.exe",
+        "uri_name": "942ab782-809d-423e-b642-42ed02bcdda4",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "contains",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "csc.exe"
+                },
+                {
+                    "operator": "matches",
+                    "token": "processEvent/parentProcess",
+                    "type": "text",
+                    "value": "wscript.exe|cscript.exe|mshta.exe"
+                }
+            ]
+        ]
+    }
+}
