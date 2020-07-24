@@ -1,0 +1,256 @@
+{
+    "cf15522a-a622-4cb5-b643-a311016e25d8": {
+        "name": "MSHTA Spawning Windows Shell",
+        "uri_name": "cf15522a-a622-4cb5-b643-a311016e25d8",
+        "category": "Custom",
+        "platforms": [
+            "win",
+            "osx"
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/parentProcess",
+                    "type": "text",
+                    "value": "mshta.exe"
+                },
+                {
+                    "operator": "equal",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "cmd.exe"
+                },
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "hp\\hp",
+                    "negate": true
+                },
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": ".+"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/parentProcess",
+                    "type": "text",
+                    "value": "mshta.exe"
+                },
+                {
+                    "operator": "equal",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "bitsadmin*"
+                },
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "hp\\hp",
+                    "negate": true
+                },
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": ".+"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/parentProcess",
+                    "type": "text",
+                    "value": "mshta.exe"
+                },
+                {
+                    "operator": "equal",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "bash.exe"
+                },
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "hp\\hp",
+                    "negate": true
+                },
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": ".+"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/parentProcess",
+                    "type": "text",
+                    "value": "mshta.exe"
+                },
+                {
+                    "operator": "equal",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "cscript.exe"
+                },
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "hp\\hp",
+                    "negate": true
+                },
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": ".+"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/parentProcess",
+                    "type": "text",
+                    "value": "mshta.exe"
+                },
+                {
+                    "operator": "equal",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "powershell.exe"
+                },
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "hp\\hp",
+                    "negate": true
+                },
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": ".+"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/parentProcess",
+                    "type": "text",
+                    "value": "mshta.exe"
+                },
+                {
+                    "operator": "equal",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "regsvr32.exe"
+                },
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "hp\\hp",
+                    "negate": true
+                },
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": ".+"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/parentProcess",
+                    "type": "text",
+                    "value": "mshta.exe"
+                },
+                {
+                    "operator": "equal",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "wscript.exe"
+                },
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "hp\\hp",
+                    "negate": true
+                },
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": ".+"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/parentProcess",
+                    "type": "text",
+                    "value": "mshta.exe"
+                },
+                {
+                    "operator": "equal",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "reg.exe"
+                },
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "hp\\hp",
+                    "negate": true
+                },
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": ".+"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/parentProcess",
+                    "type": "text",
+                    "value": "mshta.exe"
+                },
+                {
+                    "operator": "equal",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "sh.exe"
+                },
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "hp\\hp",
+                    "negate": true
+                },
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": ".+"
+                }
+            ]
+        ]
+    }
+}
