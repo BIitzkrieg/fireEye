@@ -1,6 +1,7 @@
 {
-    "cd218d17-6d86-4fb9-bba0-aa69f65fe911": {
+    "3284c5e9-2116-4ed7-845b-cfc954c5bdbc": {
         "name": "Potential lsass dump via comsvcs.dll",
+        "uri_name": "3284c5e9-2116-4ed7-845b-cfc954c5bdbc",
         "category": "Custom",
         "platforms": [
             "win"
@@ -19,7 +20,31 @@
                     "operator": "contains",
                     "token": "processEvent/processCmdLine",
                     "type": "text",
-                    "value": "rundll32"
+                    "value": "c:\\windows\\system32\\comsvcs.dll, minidump"
+                }
+            ],
+            [
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "comsvcs.dll, minidump"
+                }
+            ],
+            [
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "comsvcs.dll minidump"
+                }
+            ],
+            [
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "rundll32|rundll32.exe"
                 },
                 {
                     "operator": "contains",

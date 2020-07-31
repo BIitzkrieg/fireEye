@@ -1,0 +1,44 @@
+{
+    "87841295-a0a9-40bd-be51-eb1007b22568": {
+        "name": "Suspicious CertUtil Activity",
+        "uri_name": "87841295-a0a9-40bd-be51-eb1007b22568",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "contains",
+                    "token": "imageLoadEvent/timestamp",
+                    "type": "text",
+                    "value": "certutil\\.exe -urlcache -f http:\\/\\/.+\\/.+\\.exe"
+                }
+            ],
+            [
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": ".+\\.exe.+\\/urlcache \\/f http:\\/\\/"
+                }
+            ],
+            [
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "certutil\\.exe -urlcache -f http:\\/\\/.+\\/.+\\.exe .+\\.exe"
+                }
+            ],
+            [
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "set u=url&&call C:\\\\.+\\\\.+\\.exe \\/%u%\\^c\\^a\\^c\\^h\\^e\\^ \\/f\\^"
+                }
+            ]
+        ]
+    }
+}

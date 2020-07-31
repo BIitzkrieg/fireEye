@@ -1,0 +1,20 @@
+{
+    "e0f48e6b-3176-48f4-b9c0-2966f82510b6": {
+        "name": "Suspicious RegSvr32 Call with TMP file",
+        "uri_name": "e0f48e6b-3176-48f4-b9c0-2966f82510b6",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "matches",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "C:\\\\\\w+\\\\\\w+\\.tmp && call regsvr32 C:\\\\\\w+\\\\\\w+\\.tmp"
+                }
+            ]
+        ]
+    }
+}
