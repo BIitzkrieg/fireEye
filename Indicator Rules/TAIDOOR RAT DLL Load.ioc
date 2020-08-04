@@ -1,0 +1,42 @@
+{
+    "29b5f6ae-001d-4b55-b4b3-4fc1561f6461": {
+        "name": "TAIDOOR RAT DLL Load",
+        "uri_name": "29b5f6ae-001d-4b55-b4b3-4fc1561f6461",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "presence": [
+            [
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "rundll32.exe"
+                },
+                {
+                    "operator": "ends-with",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "mystart"
+                }
+            ],
+            [
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "dll mystart"
+                }
+            ],
+            [
+                {
+                    "operator": "contains",
+                    "token": "processEvent/processCmdLine",
+                    "type": "text",
+                    "value": "dll,mystart"
+                }
+            ]
+        ]
+    }
+}
