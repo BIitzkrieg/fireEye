@@ -1,6 +1,7 @@
 {
     "f0381099-9013-4640-8978-d9b3c9950fc9": {
         "name": "W3WP.EXE CHILD PROCESS RECON COMMAND",
+        "uri_name": "f0381099-9013-4640-8978-d9b3c9950fc9",
         "category": "Custom",
         "platforms": [
             "win"
