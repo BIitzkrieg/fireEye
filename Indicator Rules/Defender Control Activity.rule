@@ -1,0 +1,54 @@
+{
+    "ee7f87da-a135-4903-944b-f9e7c94cb475": {
+        "name": "Defender Control Activity",
+        "uri_name": "ee7f87da-a135-4903-944b-f9e7c94cb475",
+        "category": "Custom",
+        "platforms": [
+            "win"
+        ],
+        "description": "Defender Control is a small Portable freeware which will allow you to disable Windows Defender in Windows 10 completely. This can be used for defense evasion.\n\nSee:\nhttps://thedfirreport.com/2020/12/13/defender-control/",
+        "create_text": "hxtool_api",
+        "presence": [
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/md5",
+                    "type": "md5",
+                    "value": "4416f7bea63b8af85f5590a3bdf6261b"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/fileName",
+                    "type": "text",
+                    "value": "defendercontrol.exe"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/md5",
+                    "type": "md5",
+                    "value": "3a24a7b7c1ba74a5afa50f88ba81d550"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "fileWriteEvent/fileName",
+                    "type": "text",
+                    "value": "defendercontrol.ini"
+                }
+            ],
+            [
+                {
+                    "operator": "equal",
+                    "token": "processEvent/process",
+                    "type": "text",
+                    "value": "defendercontrol.exe"
+                }
+            ]
+        ]
+    }
+}
